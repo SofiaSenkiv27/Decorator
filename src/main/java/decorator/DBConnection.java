@@ -17,7 +17,8 @@ public class DBConnection {
 
     private DBConnection() {
         this.connection = DriverManager
-        .getConnection("jdbc:sqlite:/Users/sofiasenkiv/lab10 java/lab10/cache.db");
+        .getConnection(
+            "jdbc:sqlite:/Users/sofiasenkiv/lab10 java/lab10/cache.db");
 
     }
     @SneakyThrows
