@@ -1,11 +1,15 @@
 package decorator;
 
 public abstract class ItemDecorator extends Item {
-    protected Item item;
+    private Item item;
 
     public ItemDecorator(Item item) {
         super(item.getName(), item.getPrice());
         this.item = item;
+    }
+
+    protected Item getItem() {
+        return item;
     }
 
     @Override

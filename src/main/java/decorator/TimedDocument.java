@@ -6,7 +6,7 @@ import java.time.Duration;
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
-public class TimedDocument implements Document{
+public class TimedDocument implements Document {
     private Document document;
 
     @Override
@@ -14,13 +14,14 @@ public class TimedDocument implements Document{
         LocalTime startTime = LocalTime.now();
         String parsed = document.parse();
         LocalTime endTime = LocalTime.now();
-        System.out.println("Time: " + Duration.between(startTime, endTime).getSeconds());
+        System.out.println("Time: " + Duration
+        .between(startTime, endTime).getSeconds());
         return parsed;
     }
 
     @Override
     public String getGcsPath() {
         // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getGcsPath'");
+        throw new UnsupportedOperationException("Unimplemented");
     }
 }

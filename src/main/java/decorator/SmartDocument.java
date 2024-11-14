@@ -23,15 +23,19 @@ public class SmartDocument implements Document {
     public String parse() {
         List<AnnotateImageRequest> requests = new ArrayList<>();
 
-        ImageSource imgSource = ImageSource.newBuilder().setGcsImageUri(gcsPath).build();
+        ImageSource imgSource = ImageSource.newBuilder()
+        .setGcsImageUri(gcsPath).build();
         Image img = Image.newBuilder().setSource(imgSource).build();
-        Feature feat = Feature.newBuilder().setType(Type.DOCUMENT_TEXT_DETECTION).build();
+        Feature feat = Feature.newBuilder()
+        .setType(Type.DOCUMENT_TEXT_DETECTION).build();
         AnnotateImageRequest request =
-                AnnotateImageRequest.newBuilder().addFeatures(feat).setImage(img).build();
+                AnnotateImageRequest.newBuilder()
+                .addFeatures(feat).setImage(img).build();
         requests.add(request);
 
         try (ImageAnnotatorClient client = ImageAnnotatorClient.create()) {
-            BatchAnnotateImagesResponse response = client.batchAnnotateImages(requests);
+            BatchAnnotateImagesResponse response = client
+            .batchAnnotateImages(requests);
             List<AnnotateImageResponse> responses = response.getResponsesList();
             client.close();
 
@@ -46,6 +50,6 @@ public class SmartDocument implements Document {
     @Override
     public String getGcsPath() {
         // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getGcsPath'");
+        throw new UnsupportedOperationException("Unimplemented");
     }
 }

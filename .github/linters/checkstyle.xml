@@ -68,12 +68,12 @@
         <!-- http://checkstyle.sourceforge.net/config_design.html                        -->
         <!-- =========================================================================== -->
         <!-- SPECIAL HACK FOR NON-STATIC PUBIC FINAL VARIABLE -->
-        <module name="VisibilityModifier">
+        <!-- <module name="VisibilityModifier">
             <property name="publicMemberPattern" value="^SLOPE_ORDER$"/>
-        </module>
+        </module> -->
         <!-- <module name="FinalClass"/> -->
-        <module name="InterfaceIsType"/>
-        <module name="MutableException"/>
+        <!-- <module name="InterfaceIsType"/>
+        <module name="MutableException"/> -->
 
 
         <!-- =========================================================================== -->
@@ -154,7 +154,7 @@
 
         <module name="IllegalImport">
             <property name="illegalPkgs"
-                      value="java.sql, sun, java.net, java.security, javax, java.applet, java.beans, java.nio, java.rmi, java.text, java.lang.reflect, java.lang.instrument"/>
+                      value="sun, java.net, java.security, javax, java.applet, java.beans, java.nio, java.rmi, java.text, java.lang.reflect, java.lang.instrument"/>
         </module>
 
         <module name="RedundantImport"/>

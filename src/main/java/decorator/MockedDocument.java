@@ -4,8 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 @Getter
 @AllArgsConstructor
-public class MockedDocument implements Document{
-    public String gcdPath;
+public class MockedDocument implements Document {
+    private String gcdPath;
     @Override
     public String parse() {
         return "Mocked Document Parse";
@@ -13,7 +13,6 @@ public class MockedDocument implements Document{
 
     @Override
     public String getGcsPath() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getGcsPath'");
+        throw new UnsupportedOperationException("Unimplemented");
     }
 }
