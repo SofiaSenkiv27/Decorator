@@ -23,7 +23,8 @@ public class DecoratorTest {
 
         Assertions.assertEquals("Rose, Paper Wrapped", 
         paperWrappedFlower.getName());
-        Assertions.assertEquals(EXPECTED_PAPER_PRICE, paperWrappedFlower.getPrice());
+        Assertions.assertEquals(EXPECTED_PAPER_PRICE, 
+        paperWrappedFlower.getPrice());
     }
 
     @Test
@@ -52,6 +53,7 @@ public class DecoratorTest {
 
         Assertions.assertEquals("Orchid, Ribbon, Basket, Paper Wrapped", 
         decoratedFlower.getName());
-        Assertions.assertEquals(EXPECTED_COMBINED_PRICE, decoratedFlower.getPrice());
+        Assertions.assertEquals(EXPECTED_COMBINED_PRICE, 
+        decoratedFlower.getPrice());
     }
 }
